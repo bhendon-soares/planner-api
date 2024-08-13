@@ -4,6 +4,7 @@ import com.rocketseat.planner_api.activity.ActivityData;
 import com.rocketseat.planner_api.activity.ActivityRequestPayload;
 import com.rocketseat.planner_api.activity.ActivityResponse;
 import com.rocketseat.planner_api.activity.ActivityService;
+import com.rocketseat.planner_api.link.LinkData;
 import com.rocketseat.planner_api.link.LinkRequestPayload;
 import com.rocketseat.planner_api.link.LinkResponse;
 import com.rocketseat.planner_api.link.LinkService;
@@ -131,7 +132,7 @@ public class TripController {
     }
 
     @GetMapping("/{id}/participants")
-    public ResponseEntity<List<ParticipantData>> getallParticipants(@PathVariable UUID id) {
+    public ResponseEntity<List<ParticipantData>> getAllParticipants(@PathVariable UUID id) {
         List<ParticipantData> participantList = this.participantService.getAllParticipantsFromTrip(id);
 
         return ResponseEntity.ok(participantList);
@@ -153,5 +154,12 @@ public class TripController {
         }
 
         return ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/{id}/links")
+    public ResponseEntity<List<LinkData>> getAllLinks(@PathVariable UUID id) {
+        List<LinkData> linkDataList = this.linkService.getAllLinksFromTrip(id);
+
+        return ResponseEntity.ok(linkDataList);
     }
 }
