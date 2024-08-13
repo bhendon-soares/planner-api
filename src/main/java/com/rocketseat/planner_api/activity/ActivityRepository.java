@@ -1,4 +1,4 @@
-package com.rocketseat.planner_api.activities;
+package com.rocketseat.planner_api.activity;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

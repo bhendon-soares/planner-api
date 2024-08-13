@@ -1,4 +1,4 @@
-package com.rocketseat.planner_api.activities;
+package com.rocketseat.planner_api.activity;
 
 import com.rocketseat.planner_api.trip.Trip;
 import jakarta.persistence.*;

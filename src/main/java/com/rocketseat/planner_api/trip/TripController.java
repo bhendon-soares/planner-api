@@ -1,9 +1,9 @@
 package com.rocketseat.planner_api.trip;
 
-import com.rocketseat.planner_api.activities.ActivityData;
-import com.rocketseat.planner_api.activities.ActivityRequestPayload;
-import com.rocketseat.planner_api.activities.ActivityResponse;
-import com.rocketseat.planner_api.activities.ActivityService;
+import com.rocketseat.planner_api.activity.ActivityData;
+import com.rocketseat.planner_api.activity.ActivityRequestPayload;
+import com.rocketseat.planner_api.activity.ActivityResponse;
+import com.rocketseat.planner_api.activity.ActivityService;
 import com.rocketseat.planner_api.participant.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
